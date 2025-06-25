@@ -19,6 +19,15 @@ func main() {
 	fmt.Println("Remaining items:", remainItems)
 
 
+	////////////////////////////////////////////////////////////////////////////
+
+	var username string
+	var age int
+	//let the user deside what is the data type
+
+	username = "Deshan" // Assign a value to the variable
+	age = 23
+	fmt.Printf("Username: %v Age: %v", username, age) // Print the values of the variables	
 
 }
 
