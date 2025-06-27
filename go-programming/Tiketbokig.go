@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 	eventName := "Concert"
@@ -22,6 +25,7 @@ func main() {
 		var email string
 		var userTikets uint
 
+		
 
 		fmt.Print("Enter your first name: ")
 		fmt.Scanln(&firstName)
@@ -50,6 +54,14 @@ func main() {
 		fmt.Printf("The bookig slice type%T\n", bookings)
 		fmt.Printf("Booking slice length:%v\n", len(bookings))
 	////////////////////////////////////////////////////////////
+
+		firstNames := []string{} 
+		for _, booking := range bookings {
+			var names = strings.Fields(booking)
+			firstNames = append(firstNames, names[0])
+		}
+		fmt.Printf("First names of the bookings: %v\n", firstNames)
+		
 		fmt.Printf("Remaining tickets for the %v event: %d\n", eventName, remainingEventTikets)
 	}
 	
